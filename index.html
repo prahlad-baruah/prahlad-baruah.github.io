@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,120 +9,334 @@
 
 <style>
 
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
 padding:0;
-line-height:1.6;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.7;
+color:#333;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#003366;
+padding:15px;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav li{
+margin:0 15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#FFD700;
 }
 
 .hero{
 background:#003366;
 color:white;
+padding:140px 20px 80px;
 text-align:center;
-padding:100px 20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:220px;
+height:220px;
 border-radius:50%;
 object-fit:cover;
-border:4px solid white;
+border:5px solid white;
+margin-bottom:20px;
 }
 
 .hero h1{
-margin-top:20px;
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:24px;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.button-container{
+margin-top:30px;
+}
+
+.button{
+display:inline-block;
+background:#FFD700;
+color:black;
+padding:12px 20px;
+margin:5px;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+.button:hover{
+opacity:0.9;
 }
 
 section{
-padding:60px 10%;
+padding:80px 10%;
+max-width:1200px;
+margin:auto;
 }
 
-h2{
+section h2{
 color:#003366;
+margin-bottom:25px;
+font-size:32px;
+}
+
+ul{
+margin-left:20px;
+}
+
+.project-box{
+background:#f5f5f5;
+padding:25px;
+border-left:5px solid #003366;
+border-radius:10px;
+}
+
+.timeline{
+background:#f8f8f8;
+padding:25px;
+border-radius:10px;
+}
+
+.timeline p{
+margin-bottom:12px;
 }
 
 footer{
 background:#003366;
 color:white;
 text-align:center;
-padding:20px;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero h2{
+font-size:20px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="hero">
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-<img src="Prahlad.jpg" alt="Prahlad Baruah">
+<section class="hero">
+
+<img src="Prahlad.jpg" alt="Prahlad Kumar Baruah">
 
 <h1>Dr. Prahlad Kumar Baruah</h1>
 
+<h2>
+Marie Skłodowska-Curie Postdoctoral Fellow
+</h2>
+
 <p>
-Marie Skłodowska-Curie Postdoctoral Fellow<br>
 Université Claude Bernard Lyon 1, France
 </p>
 
+<div class="button-container">
+
+<a class="button" href="https://orcid.org/0000-0001-8826-9634" target="_blank">
+ORCID
+</a>
+
+<a class="button" href="https://scholar.google.com/citations?user=-UROyDYAAAAJ&hl=en" target="_blank">
+Google Scholar
+</a>
+
+<a class="button" href="https://www.researchgate.net/profile/Prahlad-Baruah" target="_blank">
+ResearchGate
+</a>
+
+<a class="button" href="https://www.linkedin.com/in/dr-prahlad-kumar-baruah-3b188822/" target="_blank">
+LinkedIn
+</a>
+
 </div>
 
-<section>
+</section>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a physicist and materials scientist working in the fields of plasmonic nanomaterials, photoelectrocatalysis, photocatalysis, laser synthesis of nanoparticles, spectroscopy, and environmental remediation technologies. My research focuses on understanding charge-transfer dynamics and designing advanced functional materials for sustainable energy and environmental applications.
+</p>
+
+</section>
+
+<section id="research">
 
 <h2>Research Interests</h2>
 
 <ul>
-<li>Laser Synthesis of Nanomaterials</li>
-<li>Plasmonic Nanoparticles</li>
+
+<li>Plasmonic Nanomaterials</li>
+
+<li>Laser Synthesis of Nanoparticles (PLAL)</li>
+
 <li>Photoelectrocatalysis</li>
+
 <li>Photocatalysis</li>
-<li>LIBS</li>
-<li>Surface Enhanced Raman Spectroscopy</li>
-<li>Advanced Spectroscopy</li>
+
+<li>Surface Enhanced Raman Spectroscopy (SERS)</li>
+
+<li>Laser-Induced Breakdown Spectroscopy (LIBS)</li>
+
+<li>Advanced Spectroscopic Techniques</li>
+
+<li>Semiconductor Heterojunctions</li>
+
+<li>Environmental Nanotechnology</li>
+
 </ul>
 
 </section>
 
-<section>
+<section id="projects">
 
 <h2>Current Project</h2>
 
-<p>
+<div class="project-box">
 
-<a href="https://prahlad-baruah.github.io/MSCA-PATCH/">
-PATCH Project Website
+<h3>PATCH</h3>
+
+<p>
+Plasmonic Nanoparticle Enhanced CuO/BiVO₄ Heterojunctions for Photoelectrocatalytic Pollutant Degradation
+</p>
+
+<p>
+Marie Skłodowska-Curie Actions Postdoctoral Fellowship
+</p>
+
+<br>
+
+<a class="button" href="https://prahlad-baruah.github.io/MSCA-PATCH/" target="_blank">
+Visit PATCH Website
 </a>
 
-</p>
+</div>
 
 </section>
 
-<section>
+<section id="education">
 
-<h2>Education</h2>
+<h2>Education & Career</h2>
+
+<div class="timeline">
+
+<p><b>2025–2027</b> — Marie Skłodowska-Curie Postdoctoral Fellow, Université Claude Bernard Lyon 1, France</p>
+
+<p><b>Assistant Professor</b> — Physics</p>
+
+<p><b>PhD in Physics</b> — IIT Guwahati, India</p>
+
+</div>
+
+</section>
+
+<section id="publications">
+
+<h2>Publications</h2>
 
 <p>
-PhD in Physics<br>
-IIT Guwahati
+For a complete and updated list of publications, citations, and research metrics, please visit my Google Scholar profile.
 </p>
+
+<br>
+
+<a class="button" href="https://scholar.google.com/citations?user=-UROyDYAAAAJ&hl=en" target="_blank">
+View Publications
+</a>
 
 </section>
 
-<section>
+<section id="contact">
 
 <h2>Contact</h2>
 
 <p>
-ORCID: Coming Soon<br>
-Google Scholar: Coming Soon
+
+<b>Professional Email:</b><br>
+prahlad-kumar.baruiah@univ-lyon1.fr
+
+<br><br>
+
+<b>Alternative Email:</b><br>
+prahlad.baruah.physics@gmail.com
+
+<br><br>
+
+<b>ORCID:</b><br>
+https://orcid.org/0000-0001-8826-9634
+
 </p>
 
 </section>
 
 <footer>
 
-© Prahlad Kumar Baruah
+© 2026 Dr. Prahlad Kumar Baruah
 
 </footer>
 
